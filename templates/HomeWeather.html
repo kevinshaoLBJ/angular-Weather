@@ -1,0 +1,70 @@
+<div>
+    <div class="up">
+        <div class="left">
+            <span ng-bind="xxx"></span>
+            <span ng-click="exchangeCity()" style="cursor:pointer">[切换]</span>
+            <div><img ng-src={{weatherInformation.nowWeather|imgSelect}} style="width:90px;margin-top:10px"></div>
+        </div>
+        <div class="right">
+            <div ng-bind="weatherInformation.nowWeather"></div>
+            <div ng-bind="weatherInformation.nowTmplimit"></div>
+            <div ng-bind="weatherInformation.nowTmp"></div>
+            <div ng-bind="weatherInformation.wind"></div>
+            <div ng-bind="weatherInformation.air"></div>
+        </div>
+    </div>
+    <div id="bigBackColor">
+        <div id="hoursWeather">
+            <div ng-repeat="hoursD in hoursData">
+                <div ng-bind="hoursD.date.slice(11)"></div>
+                <div ng-bind="hoursD.cond.txt"></div>
+                <img ng-src="{{hoursD.cond.txt|imgSelect}}" style="width:40px">
+                <div ng-bind="hoursD.tmp+'℃'"></div>
+            </div>
+            <span style="line-height:90px;font-size:20px" ng-if="hoursData.length==0?true:false">今天结束了，明天更精彩。晚安!</span>
+        </div>
+        <p class="deadLine">未来7日天气</p>
+        <table style="width:98%;margin: auto;text-align: center">
+            <tr class="row" style="height:36px"
+                ng-repeat="seven in seven">
+                <td style="width:12%;padding: 0" ng-bind="seven.week.replace('星期','周')|week:$index"></td>
+                <td style="width:12%" ng-bind="seven.days.slice(5).replace('-', '/')"></td>
+                <td style="width:12%">
+                    <img ng-src={{seven.weather|imgSelect}} style="width:40px">
+                </td>
+                <td style="width:26%" ng-bind="seven.weather"></td>
+                <td style="width:28%">
+                    <span style="color:green">{{seven.temp_low+'℃～'}}</span>
+                    <span style="color:red">{{seven.temp_high+'℃'}}</span>
+                </td>
+            </tr>
+        </table>
+        <div id="suggestion">
+            <hr>
+            <div>
+                <img src="img/空气.png">
+                <p>{{air11}}</p>
+            </div>
+            <div>
+                <img src="img/洗车.png">
+                <p ng-bind="cleanCar"></p>
+            </div>
+            <div>
+                <img src="img/运动.png">
+                <p ng-bind="sports"></p>
+            </div>
+            <div>
+                <img src="img/衣服.png">
+                <p ng-bind="drsg"></p>
+            </div>
+            <div>
+                <img src="img/感冒.png">
+                <p ng-bind="flu"></p>
+            </div>
+            <div>
+                <img src="img/旅游.png">
+                <p ng-bind="trav"></p>
+            </div>
+        </div>
+    </div>
+</div>

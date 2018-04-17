@@ -1,0 +1,14 @@
+<div>
+    <div class="guide">
+        <span class="back" ng-click="back()">&lt;返回</span>
+        <span style="font-size:22px;line-height: 40px">城市切换</span>
+    </div>
+    <div id="usual">
+        <div>最常访问城市</div>
+        <div>
+            <button ng-click="autoCity()" style="color:#ffa200;width:22.8%;">自动定位</button><button ng-repeat="get in get" ng-bind="get.cityName" ng-click="placeBut($index)"></button>
+        </div>
+    </div>
+    <div class="province">省份</div>
+    <button ng-repeat="cityList in cityList" ng-bind="cityList.p" ng-click="citys($index)"></button>
+</div>

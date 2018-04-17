@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0;
+    padding:0;
+}
+.up{
+    height: 148px;
+    background-color: #00B2EE;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#bigBackColor{
+    padding-top:10px;
+    padding-bottom:30px;
+    width:100%;
+}
+.left{
+    padding-left:10px;
+    padding-top:10px;
+}
+.right{
+    padding:10px;
+    text-align: right;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+.down{
+    margin-left:14px;
+    margin-right:14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.day{
+    width:24%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.day>div>div{
+    height:40px;
+}
+#day16,#day17,#day26,#day27{
+    color: red;
+}
+.down>.day>div{
+    line-height:40px;
+}
+.downTem{
+    color: green;
+}
+.downTem>div,.mid>div,.upTem>div{
+    height:40px;
+}
+.upTem{
+    color: red;
+}
+#hoursWeather{
+    background-color:#ACD6FF;
+    height:120px;
+    margin:0px 10px 0px 10px;
+    padding-top:8px;
+    border-radius:18px 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#hoursWeather>div{
+    text-align: center;
+}
+.deadLine{
+    margin-top:40px;
+    margin-left:14px;
+}
+.guide{
+    height:40px;
+    color: white;
+    background-color: #00B2EE;
+    text-align: center;
+}
+.back{
+    line-height:40px;
+    cursor:pointer;
+    position: absolute;
+    left:10px;
+}
+#suggestion{
+    margin:40px 14px 14px 14px;
+}
+#suggestion>div{
+    padding:6px 10px 6px 10px;
+    margin-top:10px;
+    display: flex;flex-direction:row;justify-content: flex-start;
+}
+#suggestion img{
+    width:26px;
+    height:26px;
+}
+#suggestion p{
+    font-size:20px;
+    margin-left:8px;
+}
+#usual{
+    color: #2aabd2;
+    font-size:20px;
+    line-height:60px;
+    text-align:center;
+}
+.province{
+    width:100%;
+    line-height:60px;
+    color:#2aabd2;
+    font-size:20px;
+    text-align: center;
+}
+button{
+    width:22.8%;
+    margin:1%;
+    height:40px;
+    background-color: #eaf4ff;
+    box-shadow:3px 0px 2px #888888;
+    border:1px solid gray;
+    border-radius:5px;
+    cursor:pointer;
+}

@@ -1,0 +1,9 @@
+<div>
+    <div class="guide">
+        <span class="back" ng-click="back()">&lt;返回</span>
+        <span style="font-size:22px;line-height: 40px">城市切换</span>
+    </div>
+    <div >
+        <button ng-repeat="city in city" ng-bind="city.n" ng-click="citys($index)"></button>
+    </div>
+</div>
